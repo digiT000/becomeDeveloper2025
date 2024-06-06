@@ -87,6 +87,11 @@ p {
 }
 
 /* PROJECT SECTION */
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 .projectSection {
   padding: 40px 20px;
@@ -149,6 +154,10 @@ p {
   }
   .bigText {
     font-size: 23rem;
+  }
+  .header-4 {
+    font-size: 1.6rem;
+    font-weight: 700;
   }
   .container {
     max-width: 728px;
