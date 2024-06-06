@@ -87,6 +87,11 @@ p {
 }
 
 /* PROJECT SECTION */
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 .projectSection {
   padding: 40px 20px;
