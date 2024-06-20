@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Overpass", sans-serif !important;
+  font-weight: 600;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+/* FONT STYLE */
+.header-1 {
+  font-size: 2.8rem;
+}
+.bodyText {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* LAYOUT */
+.mb-16 {
+  margin-bottom: 1.6rem;
+}
+
+.mb-40 {
+  margin-bottom: 4rem;
+}
+
+/* BUTTON */
+.btn {
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.4rem;
+  border-radius: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background-color: #fff;
+  color: hsl(353, 100%, 62%);
+}
+.btnSecondary {
+  border: 1px solid #fff;
+}
+
+/* HEADER SECTION AND HERO SECTION */
+.headerSection {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  border-bottom-left-radius: 100px;
+}
+
+.navigationBar {
+  padding: 40px 20px;
+  position: relative;
+  z-index: 999;
+}
+.leftNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navListDesktop {
+  display: none;
+}
+.navButtonWrapper {
+  display: none;
+}
+
+.heroSection {
+  position: relative;
+  padding: 40px 20px 80px 20px;
+  text-align: center;
+  color: #fff;
+  z-index: 999;
+}
+.heroImage {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  width: 100%;
+  scale: 2.8;
+  z-index: 0;
+}
+
+.heroImage img {
+  width: 100%;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
