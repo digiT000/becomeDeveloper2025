@@ -1,0 +1,233 @@
+:root {
+  --lightRed: hsl(0, 100%, 67%);
+  --orangeYellow: hsl(39, 100%, 56%);
+  --greenTeal: hsl(166, 100%, 37%);
+  --cobaltBlue: hsl(234, 85%, 45%);
+
+  --softRed: hsla(0, 100%, 67%, 0.05);
+  --softYellow: hsl(39, 100%, 56%, 0.05);
+  --softGreen: hsl(166, 100%, 37%, 0.05);
+  --softBlue: hsl(234, 85%, 45%, 0.05);
+  --softDark: hsla(224, 30%, 27%, 0.189);
+
+  --white: hsl(0, 0%, 100%);
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: hsl(224, 30%, 27%);
+}
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: var(--darkGrayBlue);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.mb-12{
+  margin-bottom: 12px;
+}
+
+/* TEXT STYLE */
+.header-1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.header-2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+.header-3 {
+  font-size: 18px;
+  font-weight: 800;
+}
+.body-semibold {
+  font-size: 18px;
+  font-weight: 700;
+}
+.body-med {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 130%;
+}
+.caption {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ----------------------------- */
+
+/* COLOR TEXT */
+.cl-mainText {
+  color: var(--white);
+}
+.cl-subText {
+  color: var(--lightLavender);
+}
+.cl-redText {
+  color: var(--lightRed);
+}
+.cl-yellowText {
+  color: var(--orangeYellow);
+}
+.cl-green {
+  color: var(--greenTeal);
+}
+.cl-blue {
+  color: var(--cobaltBlue);
+}
+.cl-darkBlue {
+  color: var(--darkGrayBlue);
+}
+.cl-softDark {
+  color: var(--softDark);
+}
+
+/* ----------------------------- */
+
+.resultContainer {
+  color: #fff;
+  background: rgb(120, 87, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(120, 87, 255, 1) 0%,
+    rgba(46, 43, 233, 1) 100%
+  );
+  padding: 32px 24px 40px 24px;
+  text-align: center;
+  border-radius: 0 0 32px 32px;
+}
+.resultItem {
+  padding: 32px;
+  background-color: #ffffff1b;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 24px auto;
+
+  background: rgb(36, 33, 202);
+  background: linear-gradient(
+    180deg,
+    rgba(36, 33, 202, 1) 0%,
+    rgba(78, 33, 202, 0) 100%
+  );
+}
+
+/* SUMMARY SECTION */
+
+.summaryContainer {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.summaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.sumName {
+  display: flex;
+  gap: 12px;
+}
+.sumName img {
+  width: 24px;
+}
+.reaction {
+  background-color: var(--softRed);
+}
+.memory {
+  background-color: var(--softYellow);
+}
+.verbal {
+  background-color: var(--softGreen);
+}
+.visual {
+  background-color: var(--softBlue);
+}
+
+.buttonPrimary {
+  border: none;
+  width: 100%;
+  padding: 4px 24px;
+  height: 48px;
+  background: var(--darkGrayBlue);
+  background-color: var(--darkGrayBlue);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 24px;
+  transition: 0.2s;
+}
+
+.buttonPrimary:hover {
+  background: rgb(120, 87, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(120, 87, 255, 1) 0%,
+    rgba(46, 43, 233, 1) 100%
+  );
+}
+
+@media only screen and (min-width: 720px) {
+  main{
+    height: 100vh;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .header-1 {
+    font-size: 64px;
+    font-weight: 800;
+  }
+  .summaryComponent {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: -1px 8px 19px 16px rgba(235,241,255,1);
+-webkit-box-shadow: -1px 8px 19px 16px rgba(235,241,255,1);
+-moz-box-shadow: -1px 8px 19px 16px rgba(235,241,255,1);
+  }
+  .resultContainer {
+    width: 50%;
+    border-radius: 0 24px 24px 0;
+    padding: 40px;
+  }
+  .resultItem{
+    width: 80px;
+    height: 80px;
+  }
+  .summaryContainer {
+    width: 50%;
+    gap: 40px;
+  }
+}

@@ -1,0 +1,334 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Bai Jamjuree", sans-serif;  
+    color: hsl(210, 10%, 33%); 
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+/* FONT STYLES */
+.header-1{
+    font-size:3.6rem ;
+    font-weight: 600;
+}
+.header-2{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.header-3{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+.bodyText{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+    color: hsl(201, 11%, 66%);
+}
+
+
+
+/* LAYOUT */
+.mb-m{
+    margin-bottom: 16px;
+}
+
+.mb-l{
+    margin-bottom: 48px;
+}
+
+.mb-xl{
+    margin-bottom: 64px;
+}
+
+
+/* BUTTON STYLE */
+.btn{
+    border: none;
+    padding: 16px 20px;
+    width: 100%;
+    border-radius: 100px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.btnIOS{
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: inset 0px -2px 2px hsl(171, 83%, 19%);
+}
+.btnIOS:hover{
+    background-color: hsl(171, 57%, 55%);
+    box-shadow: inset 0px -2px 2px hsl(171, 83%, 19%),2px 1px 44px 2px rgba(38,186,164,0.39);
+    
+}
+.btnMac{
+    background-color: hsl(233, 100%, 69%);
+    box-shadow: inset 0px -2px 2px hsl(232, 64%, 27%);
+}
+.btnMac:hover{
+    background-color: hsl(233, 100%, 81%);
+    box-shadow: inset 0px -2px 2px hsl(232, 64%, 27%),2px 1px 44px 2px hsla(233, 100%, 69%, 0.267);
+}
+
+
+
+/* HERO SECTION */
+.heroSection{
+    padding:80px 20px;
+    position: relative;
+}
+.heroWrapper{
+    text-align: center;
+}
+.buttonWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.bgDesktop{
+    display: none;
+}
+.bgAbs{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}.bgAbs img{
+    width: 100%;
+}
+
+
+/* FEATURE SECTION */
+
+.featureSection{
+    padding: 80px 20px;
+}
+.featureWrapper{
+    text-align: center;
+}
+.imgContentContainer img{
+    width: 100%;
+}
+.featureList{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.featureItem{
+    text-align: center;
+}
+
+/* ACCESS CLIPBOARD SECTION */
+.accessClipboard{
+    padding: 80px 20px;
+}
+.clipboardWrapper{
+    text-align: center;
+}
+.clipboardImageContainer img{
+    width: 100%;
+}
+
+/* BENEFIT SECTION */
+.benefitSection{
+    padding: 0 20px 80px 20px
+}
+.benefitWrapper{
+    text-align: center;
+}
+.benefitList{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.benefitItem{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+
+.socialLogo{
+    padding: 80px 20px;
+}
+.socialLogoWrapper{
+    display: flex;
+    flex-direction: column;
+    gap:60px;
+    align-items: center;
+}   
+
+/* CTA SECTION */
+
+.callToActionSection{
+    padding: 80px 20px;
+}
+.ctaWrapper{
+    text-align: center;
+}
+
+/* FOOTER */
+.footerSection{
+    padding: 80px 20px;
+    background-color: #F5F6F8;
+}
+.footerWrapper{
+    text-align: center;
+
+}
+.footerWrapper img{
+    width: 72px;
+}
+
+.navList{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.navItem{
+    font-size: 18px;
+    text-decoration: none;
+    color: hsl(210, 10%, 33%); 
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.navItem:hover{
+    color: hsl(171, 66%, 44%);
+}
+
+
+.socialMedia{
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+
+@media only screen and (min-width:768px){
+
+    .desk-mb-m{
+        margin-bottom: 24px;
+    }
+    .desk-mb-xl{
+        margin-bottom: 100px;
+    }
+
+    .desk-text-max-w{
+        max-width: 660px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* FONT STYLES */
+    .header-1{
+        font-size:4.8rem ;
+        
+    }
+    .header-2{
+        font-size: 3.6rem;
+    }
+    .header-3{
+        font-size: 2.8rem;
+    }
+
+    .container{
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    
+    /* HERO SECTION */
+    .bgDesktop{
+        display: inline-block;
+    }
+    .bgMobile{
+        display: none;
+    }
+    .heroSection{
+        padding: 120px 20px;
+    }
+    .buttonWrapper{
+        flex-direction: row;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* FEATURE SECTION */
+    .featureSection{
+        padding: 120px 20px;
+    }
+    .contentWrapper{
+        display: flex;
+        gap: 80px;
+        justify-content: center;
+    }
+    .imgContentContainer img{
+        width: 120%;
+        margin-left: -120px;
+    }
+    .featureList{
+        padding-top: 3%;
+    }
+    .featureItem{
+        text-align: left;
+    }
+
+
+    /* BENEFIT  */
+    .benefitSection{
+        padding-bottom: 160px;
+    }
+    .benefitList{
+        flex-direction: row;
+    }
+
+    .socialLogoWrapper{
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+        flex-wrap: wrap;
+    }
+    
+
+    .callToActionSection{
+        padding: 160px 20px;
+    }
+    .footerWrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .navList{
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 32px
+    }
+    .navItem{
+        text-align: left;
+        min-width: 122px;
+    }
+
+    
+    
+}
