@@ -22,21 +22,12 @@
     <link rel="stylesheet" href="stlye.css" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <header class="headerSection">
       <picture class="heroImage">
         <source
-          media="(min-width:768px)"
+          media="(min-width:1024px)"
           srcset="images/bg-pattern-intro-desktop.svg"
         />
         <img src="images/bg-pattern-intro-mobile.svg" alt="Flowers" />
@@ -93,7 +84,7 @@
     </header>
     <section class="benefitSection">
       <div class="container benefitWrapper">
-        <h2 class="header-2 mb-16">Designed for the future</h2>
+        <h2 class="header-2 mb-16 desk-mb-6">Designed for the future</h2>
         <div class="benefitContentWrapper">
           <picture class="benefitImage">
             <source
@@ -151,12 +142,16 @@
     </section>
 
     <section class="benefitSection">
-      <div class="container benefitWrapper pb-80">
-        <div class="benefitContentWrapper">
+      <div class="container benefitWrapper pb-80 desk-p-160">
+        <div class="benefitContentWrapper desk-row">
           <picture class="benefitImage">
-            <source media="(min-width:768px)"
+            <source media="(min-width:1024px)"
             srcset="images/illustration-laptop-desktop.svg".svg" />
-            <img src="images/illustration-laptop-mobile.svg" alt="Flowers" />
+            <img
+              class="desk-m-minus-img"
+              src="images/illustration-laptop-mobile.svg"
+              alt="Flowers"
+            />
           </picture>
 
           <div class="benefitItemWrapper">
@@ -183,20 +178,43 @@
         </div>
       </div>
     </section>
-    A modern publishing platform Grow your audience and build your online brand
-    Start for Free Learn More Designed for the future Introducing an extensible
-    editor Robust content management Flexible content management enables users
-    to easily move through posts. Increase the usability of your blog by adding
-    customized categories, sections, format, or flow. With this functionality,
-    you’re in full control. State of the Art Infrastructure Free, open, simple
-    Powerful tooling Product Overview Pricing Marketplace Features Integrations
-    Company About Team Blog Careers Connect Contact Newsletter LinkedIn
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <footer class="footerSection">
+      <div class="container footerWrapper">
+        <div class="footerItem">
+          <img src="images/logo.svg" />
+        </div>
+        <div class="footerItem footerLink">
+          <h4 class="header-4 mb-8">Product</h4>
+
+          <a href="#" class="footerItemLink">Overview</a>
+          <a href="#" class="footerItemLink">Pricing</a>
+          <a href="#" class="footerItemLink">Marketplace</a>
+          <a href="#" class="footerItemLink">Features</a>
+          <a href="#" class="footerItemLink">Integrations</a>
+        </div>
+        <div class="footerItem footerLink">
+          <h4 class="header-4 mb-8">Company</h4>
+
+          <a href="#" class="footerItemLink">About</a>
+          <a href="#" class="footerItemLink">Team</a>
+          <a href="#" class="footerItemLink">Blog</a>
+          <a href="#" class="footerItemLink">Careers</a>
+        </div>
+        <div class="footerItem footerLink">
+          <h4 class="header-4 mb-8">Connect</h4>
+
+          <a href="#" class="footerItemLink">Contact</a>
+          <a href="#" class="footerItemLink">Newsletter</a>
+          <a href="#" class="footerItemLink">Linkedin</a>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Farel Darari Deksano</a>.
+      </div>
+    </footer>
   </body>
 </html>
