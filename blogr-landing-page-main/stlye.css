@@ -59,6 +59,7 @@ p {
 
 /* BUTTON */
 .btn {
+  height: fit-content;
   font-family: "Ubuntu", sans-serif;
   text-decoration: none;
   color: #fff;
@@ -115,7 +116,21 @@ p {
   position: relative;
   z-index: 999;
 }
+.btnDropdown {
+  font-size: 1.6rem;
+  padding: 8px;
+  cursor: pointer;
+}
+.btnNavigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background-color: transparent;
+  color: #121212;
+}
 .leftNavigation {
+  position: inherit;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -132,7 +147,7 @@ p {
   padding: 40px 20px 80px 20px;
   text-align: center;
   color: #fff;
-  z-index: 999;
+  z-index: 2;
 }
 .heroImage {
   position: absolute;
@@ -329,7 +344,13 @@ p {
     display: flex;
     justify-content: space-between;
   }
+  .btnNavigation {
+    color: #fff;
+  }
 
+  .btnNavigation:hover {
+    text-decoration: underline;
+  }
   .navListDesktop ul {
     display: flex;
     gap: 3.2rem;
@@ -343,9 +364,6 @@ p {
     font-size: 1.6rem;
     color: #fff;
     transition: 0.2s;
-  }
-  .navListDesktop ul li a:hover {
-    text-decoration: underline;
   }
 
   .footerItemLink:hover {
@@ -361,11 +379,11 @@ p {
   }
   .heroImage {
     position: absolute;
-    bottom: 0;
+    left: 0;
+    top: 0;
 
-    scale: 1;
+    scale: 1.5;
   }
-
   .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -426,4 +444,69 @@ p {
     width: 25%;
     text-align: left;
   }
+}
+
+/* DROPDOWN  STYLE */
+.dropdownWrapper {
+  position: relative;
+}
+.dropdownPos {
+  position: absolute;
+  z-index: 1;
+}
+.dropdownContainer {
+  display: none;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+}
+.dropdownItem {
+  width: 100%;
+  color: #121212 !important;
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.dropdownItem:last-child {
+  margin-bottom: 0;
+}
+
+.dropdownItem:hover {
+  font-weight: 600;
+}
+
+.showDropdown {
+  display: block;
+}
+.btnIcon {
+  transition: all 0.2s linear;
+}
+
+/* MOBILE */
+
+.mb-centerItem {
+}
+.mb-dropdownMobile {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+}
+.mb-dropdownWrapper ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.mb-dropdownWrapper {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+}
+.mb-dropdownContainer {
+  box-shadow: none;
+  background-color: #efeff1;
+  border-radius: 4px;
 }

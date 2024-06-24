@@ -33,33 +33,149 @@
         <img src="images/bg-pattern-intro-mobile.svg" alt="Flowers" />
       </picture>
       <div class="container navigationBar">
+        <!-- DESKTOP DROPDOWN NAVIGFATIONN -->
         <div class="leftNavigation">
           <img src="images/logo.svg" alt="brand logo" />
           <nav class="navListDesktop">
             <ul>
               <li>
-                <a href="#"
-                  >Product
-                  <span><img src="images/icon-arrow-light.svg" alt="" /></span
-                ></a>
+                <div class="dropdownWrapper">
+                  <button class="btnNavigation btnDropdown">
+                    Product
+                    <span
+                      ><img
+                        class="btnIcon"
+                        src="images/icon-arrow-light.svg"
+                        alt=""
+                    /></span>
+                  </button>
+
+                  <div class="dropDownNav dropdownContainer dropdownPos">
+                    <a href="#" class="dropdownItem">Contact</a
+                    ><a href="#" class="dropdownItem">Newsletter</a
+                    ><a href="#" class="dropdownItem">Linkedin</a>
+                  </div>
+                </div>
               </li>
               <li>
-                <a href="#"
-                  >Company
-                  <span><img src="images/icon-arrow-light.svg" alt="" /></span
-                ></a>
+                <div class="dropdownWrapper">
+                  <button class="btnNavigation btnDropdown">
+                    Company
+                    <span
+                      ><img
+                        class="btnIcon"
+                        src="images/icon-arrow-light.svg"
+                        alt=""
+                    /></span>
+                  </button>
+
+                  <div class="dropDownNav dropdownContainer dropdownPos">
+                    <a href="#" class="dropdownItem">Contact</a
+                    ><a href="#" class="dropdownItem">Newsletter</a
+                    ><a href="#" class="dropdownItem">Linkedin</a>
+                  </div>
+                </div>
               </li>
               <li>
-                <a href="#"
-                  >Connect
-                  <span><img src="images/icon-arrow-light.svg" alt="" /></span
-                ></a>
+                <div class="dropdownWrapper">
+                  <button class="btnNavigation btnDropdown">
+                    Connect
+                    <span
+                      ><img
+                        class="btnIcon"
+                        src="images/icon-arrow-light.svg"
+                        alt=""
+                    /></span>
+                  </button>
+
+                  <div class="dropDownNav dropdownContainer dropdownPos">
+                    <a
+                      href="https://www.sitepoint.com/community/t/window-onclick-runs-the-function-immediately/298178"
+                      class="dropdownItem"
+                      >Contact</a
+                    ><a href="#" class="dropdownItem">Newsletter</a
+                    ><a href="#" class="dropdownItem">Linkedin</a>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
           <nav class="NavMobile">
             <img src="images/icon-hamburger.svg" alt="" />
           </nav>
+          <!-- MOBILE DROPDOWN CONTAINER -->
+          <div class="mb-dropdownMobile">
+            <div class="mb-dropdownWrapper">
+              <ul>
+                <li>
+                  <div class="mb-dropdown">
+                    <button class="btnNavigation btnDropdown">
+                      Product
+                      <span
+                        ><img
+                          class="btnIcon"
+                          src="images/icon-arrow-dark.svg"
+                          alt=""
+                      /></span>
+                    </button>
+
+                    <div
+                      class="dropDownNav dropdownContainer mb-dropdownContainer"
+                    >
+                      <a href="#" class="dropdownItem">Contact</a
+                      ><a href="#" class="dropdownItem">Newsletter</a
+                      ><a href="#" class="dropdownItem">Linkedin</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="mb-dropdown">
+                    <button class="btnNavigation btnDropdown mb-centerItem">
+                      Company
+                      <span
+                        ><img
+                          class="btnIcon"
+                          src="images/icon-arrow-dark.svg"
+                          alt=""
+                      /></span>
+                    </button>
+
+                    <div
+                      class="dropDownNav dropdownContainer mb-dropdownContainer"
+                    >
+                      <a href="#" class="dropdownItem">Contact</a
+                      ><a href="#" class="dropdownItem">Newsletter</a
+                      ><a href="#" class="dropdownItem">Linkedin</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="mb-dropdown">
+                    <button class="btnNavigation btnDropdown">
+                      Connect
+                      <span
+                        ><img
+                          class="btnIcon"
+                          src="images/icon-arrow-dark.svg"
+                          alt=""
+                      /></span>
+                    </button>
+
+                    <div
+                      class="dropDownNav dropdownContainer mb-dropdownContainer"
+                    >
+                      <a
+                        href="https://www.sitepoint.com/community/t/window-onclick-runs-the-function-immediately/298178"
+                        class="dropdownItem"
+                        >Contact</a
+                      ><a href="#" class="dropdownItem">Newsletter</a
+                      ><a href="#" class="dropdownItem">Linkedin</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="navButtonWrapper">
           <a href="#" class="btn btnSecondary">Login</a>
@@ -216,5 +332,7 @@
         >. Coded by <a href="#">Farel Darari Deksano</a>.
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
