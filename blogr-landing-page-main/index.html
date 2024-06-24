@@ -24,6 +24,76 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
+    <!-- MOBILE DROPDOWN CONTAINER -->
+    <div id="menuMobile" class="mb-dropdownMobile">
+      <div class="mb-dropdownWrapper">
+        <ul>
+          <li>
+            <div class="mb-dropdown">
+              <button class="btnNavigation btnDropdown mb-8">
+                Product
+                <span
+                  ><img class="btnIcon" src="images/icon-arrow-dark.svg" alt=""
+                /></span>
+              </button>
+
+              <div
+                class="dropDownNav dropdownContainer mb-dropdownContainer mb-16"
+              >
+                <a href="#" class="dropdownItem">Contact</a
+                ><a href="#" class="dropdownItem">Newsletter</a
+                ><a href="#" class="dropdownItem">Linkedin</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mb-dropdown">
+              <button class="btnNavigation btnDropdown mb-centerItem mb-8">
+                Company
+                <span
+                  ><img class="btnIcon" src="images/icon-arrow-dark.svg" alt=""
+                /></span>
+              </button>
+
+              <div
+                class="dropDownNav dropdownContainer mb-dropdownContainer mb-16"
+              >
+                <a href="#" class="dropdownItem">Contact</a
+                ><a href="#" class="dropdownItem">Newsletter</a
+                ><a href="#" class="dropdownItem">Linkedin</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mb-dropdown">
+              <button class="btnNavigation btnDropdown mb-8">
+                Connect
+                <span
+                  ><img class="btnIcon" src="images/icon-arrow-dark.svg" alt=""
+                /></span>
+              </button>
+
+              <div
+                class="dropDownNav dropdownContainer mb-dropdownContainer mb-16"
+              >
+                <a
+                  href="https://www.sitepoint.com/community/t/window-onclick-runs-the-function-immediately/298178"
+                  class="dropdownItem"
+                  >Contact</a
+                ><a href="#" class="dropdownItem">Newsletter</a
+                ><a href="#" class="dropdownItem">Linkedin</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <hr class="horiLine" />
+        <div class="mobileButtonWrapper">
+          <a href="#" class="btn btnSecondary-rev">Login</a>
+          <a href="#" class="btn btnPrimary-rev">Sign Up</a>
+        </div>
+      </div>
+    </div>
     <header class="headerSection">
       <picture class="heroImage">
         <source
@@ -101,81 +171,10 @@
             </ul>
           </nav>
           <nav class="NavMobile">
-            <img src="images/icon-hamburger.svg" alt="" />
+            <button id="btnMenu" class="btnMenu">
+              <img id="btnImg" src="images/icon-hamburger.svg" alt="" />
+            </button>
           </nav>
-          <!-- MOBILE DROPDOWN CONTAINER -->
-          <div class="mb-dropdownMobile">
-            <div class="mb-dropdownWrapper">
-              <ul>
-                <li>
-                  <div class="mb-dropdown">
-                    <button class="btnNavigation btnDropdown">
-                      Product
-                      <span
-                        ><img
-                          class="btnIcon"
-                          src="images/icon-arrow-dark.svg"
-                          alt=""
-                      /></span>
-                    </button>
-
-                    <div
-                      class="dropDownNav dropdownContainer mb-dropdownContainer"
-                    >
-                      <a href="#" class="dropdownItem">Contact</a
-                      ><a href="#" class="dropdownItem">Newsletter</a
-                      ><a href="#" class="dropdownItem">Linkedin</a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="mb-dropdown">
-                    <button class="btnNavigation btnDropdown mb-centerItem">
-                      Company
-                      <span
-                        ><img
-                          class="btnIcon"
-                          src="images/icon-arrow-dark.svg"
-                          alt=""
-                      /></span>
-                    </button>
-
-                    <div
-                      class="dropDownNav dropdownContainer mb-dropdownContainer"
-                    >
-                      <a href="#" class="dropdownItem">Contact</a
-                      ><a href="#" class="dropdownItem">Newsletter</a
-                      ><a href="#" class="dropdownItem">Linkedin</a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="mb-dropdown">
-                    <button class="btnNavigation btnDropdown">
-                      Connect
-                      <span
-                        ><img
-                          class="btnIcon"
-                          src="images/icon-arrow-dark.svg"
-                          alt=""
-                      /></span>
-                    </button>
-
-                    <div
-                      class="dropDownNav dropdownContainer mb-dropdownContainer"
-                    >
-                      <a
-                        href="https://www.sitepoint.com/community/t/window-onclick-runs-the-function-immediately/298178"
-                        class="dropdownItem"
-                        >Contact</a
-                      ><a href="#" class="dropdownItem">Newsletter</a
-                      ><a href="#" class="dropdownItem">Linkedin</a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
         <div class="navButtonWrapper">
           <a href="#" class="btn btnSecondary">Login</a>

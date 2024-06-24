@@ -88,6 +88,25 @@ p {
   color: hsl(353, 100%, 62%);
 }
 
+.btnPrimary-rev {
+  background-color: hsl(353, 100%, 62%);
+  color: #fff;
+  width: fit-content;
+}
+
+.btnSecondary-rev {
+  background-color: transparent;
+  color: #121212;
+  width: fit-content;
+}
+.btnMenu {
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 8px;
+  background-color: transparent;
+}
+
 /* COLOR */
 
 .cl-subText {
@@ -118,8 +137,9 @@ p {
 }
 .btnDropdown {
   font-size: 1.6rem;
-  padding: 8px;
+  padding: 12px;
   cursor: pointer;
+  font-weight: 700;
 }
 .btnNavigation {
   display: flex;
@@ -296,6 +316,9 @@ p {
 }
 
 @media only screen and (min-width: 1024px) {
+  .mb-dropdownMobile {
+    display: none !important  ;
+  }
   /* LAYOUT */
   .desk-mb-6 {
     margin-bottom: 6rem;
@@ -444,6 +467,10 @@ p {
     width: 25%;
     text-align: left;
   }
+
+  .btnDropdown {
+    font-weight: 400;
+  }
 }
 
 /* DROPDOWN  STYLE */
@@ -490,23 +517,53 @@ p {
 
 .mb-centerItem {
 }
+
+.mb-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .mb-dropdownMobile {
+  padding: 0 20px;
+  display: none;
   position: absolute;
-  top: 50px;
+  top: 100px;
   left: 0;
   width: 100%;
+  z-index: 9999;
 }
 .mb-dropdownWrapper ul {
   padding-left: 0;
   list-style-type: none;
 }
 .mb-dropdownWrapper {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   border-radius: 4px;
   padding: 20px;
 }
 .mb-dropdownContainer {
+  width: 100%;
   box-shadow: none;
   background-color: #efeff1;
   border-radius: 4px;
+  text-align: center;
+}
+
+.horiLine {
+  border: 0.8px solid #dedede;
+}
+.mobileButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+}
+.mobileButtonWrapper a {
+  text-align: center;
+  font-size: 1.8rem;
+  width: 70%;
+}
+.showMobileMenu {
+  display: block;
 }
