@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  color: hsl(292, 42%, 14%);
+  background-color: hsl(275, 100%, 97%);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* FONT STYLE */
+
+.header-1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.header-2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.bodyText {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: hsl(292, 42%, 14%, 65%);
+}
+
+/* LAYOUT */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.mb-8 {
+  margin-bottom: 0.8rem;
+}
+.alignItem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* BG SECTION */
+.bgSection {
+  position: relative;
+  z-index: -1;
+}
+.bgContainer img {
+  width: 100%;
+}
+
+/* FAQ SECTION */
+
+.faqSection {
+  padding: 40px 20px;
+}
+
+.faqWrapper {
+  background-color: #fff;
+  padding: 32px;
+  margin-top: -150px;
+  border-radius: 8px;
+}
+.faqItem {
+  padding: 24px 0;
+  border-bottom: 1px solid #dedede67;
+}
+.faqItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.titleFaq {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bodyFaq {
+  display: none;
+  margin-top: 2.4rem;
+}
+.showFaq {
+  display: inline-block;
+}
+.btnImgWrapper {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #ad28eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PLUS MINUS ANIMATION */
+.plusminus {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+
+  &.active {
+    &:before {
+      transform: translatey(-50%) rotate(-90deg);
+      opacity: 0;
+    }
+    &:after {
+      transform: translatey(-50%) rotate(0);
+    }
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: 0.35s;
+    width: 100%;
+    height: 2px;
+  }
+
+  &:before {
+    transform: translatey(-50%);
+  }
+
+  &:after {
+    transform: translatey(-50%) rotate(90deg);
+  }
+}
