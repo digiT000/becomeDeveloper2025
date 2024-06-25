@@ -101,8 +101,8 @@ p {
   display: inline-block;
 }
 .btnImgWrapper {
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   border-radius: 100%;
   background-color: #ad28eb;
   display: flex;
