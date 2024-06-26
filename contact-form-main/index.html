@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="contactUs">
+      <div class="container">
+        <div class="contactUsWrapper">
+          <h1 class="header-1">Contact Us</h1>
+          <form class="formContainer" action="" method="post">
+            <div class="inputRow">
+              <div class="inputWrapper">
+                <label for="firstName"
+                  >First Name <span class="requiredMark">*</span></label
+                >
+                <input
+                  class="inputField"
+                  type="text"
+                  name="firstName"
+                  required
+                  placeholder="Enter your first name"
+                />
+                <div id="firstNameError" class="errorMessage">
+                  This field is required
+                </div>
+              </div>
+
+              <div class="inputWrapper">
+                <label for="lastName">Last Name *</label>
+                <input
+                  class="inputField"
+                  type="text"
+                  name="lastName"
+                  required
+                  placeholder="Enter your last name"
+                />
+                <div id="lastNameError" class="errorMessage">
+                  This field is required
+                </div>
+              </div>
+            </div>
+            <div class="inputWrapper">
+              <label for="emailAddress">Email Address *</label>
+              <input
+                class="inputField"
+                type="email"
+                name="emailAddress"
+                required
+                placeholder="Enter your valid email address"
+              />
+              <div id="firstNameError" class="errorMessage">
+                Please enter a valid email address
+              </div>
+            </div>
+            <div class="inputWrapper radioButton">
+              <label for="">Query Type *</label>
+              <div class="wrapper">
+                <div class="radioWrapper">
+                  <input
+                    class="radioItem"
+                    type="radio"
+                    name="queryType"
+                    id="general"
+                    value="General Enquiry"
+                  />
+                  <label for="general">General Enquiry</label>
+                </div>
+
+                <div class="radioWrapper">
+                  <input
+                    class="radioItem"
+                    type="radio"
+                    name="queryType"
+                    id="general"
+                    value="General Enquiry"
+                  />
+                  <label for="general">Support Request</label>
+                </div>
+              </div>
+
+              <div id="firstNameError" class="errorMessage">
+                Please select a query type
+              </div>
+            </div>
+
+            <div class="inputWrapper">
+              <label for="message">Message *</label>
+              <textarea class="textArea" name="message" id=""></textarea>
+              <div id="firstNameError" class="errorMessage">
+                Please enter a valid email address
+              </div>
+            </div>
+
+            <div class="inputWrapper checkBoxWrapper">
+              <input type="checkbox" name="consent" id="" />
+              <label for="consent"
+                >I consent to being contacted by the team</label
+              >
+            </div>
+
+            button
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
