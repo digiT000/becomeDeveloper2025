@@ -36,17 +36,18 @@
     <section class="contactUs">
       <div class="container">
         <div class="contactUsWrapper">
-          <h1 class="header-1">Contact Us</h1>
-          <form class="formContainer" action="" method="post">
+          <h1 class="header-1 mb-40">Contact Us</h1>
+          <form class="formContainer" method="post" novalidate>
             <div class="inputRow">
               <div class="inputWrapper">
                 <label for="firstName"
                   >First Name <span class="requiredMark">*</span></label
                 >
                 <input
-                  class="inputField"
+                  class="inputField fieldText inputCheck"
                   type="text"
                   name="firstName"
+                  id="inputFirstName"
                   required
                   placeholder="Enter your first name"
                 />
@@ -58,9 +59,10 @@
               <div class="inputWrapper">
                 <label for="lastName">Last Name *</label>
                 <input
-                  class="inputField"
+                  class="inputField fieldText inputCheck"
                   type="text"
                   name="lastName"
+                  id="inputLastName"
                   required
                   placeholder="Enter your last name"
                 />
@@ -72,13 +74,14 @@
             <div class="inputWrapper">
               <label for="emailAddress">Email Address *</label>
               <input
-                class="inputField"
+                class="inputField fieldText inputCheck"
                 type="email"
                 name="emailAddress"
+                id="inputEmail"
                 required
                 placeholder="Enter your valid email address"
               />
-              <div id="firstNameError" class="errorMessage">
+              <div id="emailAddressError" class="errorMessage">
                 Please enter a valid email address
               </div>
             </div>
@@ -86,58 +89,86 @@
               <label for="">Query Type *</label>
               <div class="wrapper">
                 <div class="radioWrapper">
-                  <input
-                    class="radioItem"
-                    type="radio"
-                    name="queryType"
-                    id="general"
-                    value="General Enquiry"
-                  />
-                  <label for="general">General Enquiry</label>
+                  <label class="radioItem">
+                    <input
+                      class="radioSelection inputCheck"
+                      type="radio"
+                      name="queryType"
+                      id="general"
+                      value="General Enquiry"
+                    />General Enquiry
+                  </label>
                 </div>
 
                 <div class="radioWrapper">
-                  <input
-                    class="radioItem"
-                    type="radio"
-                    name="queryType"
-                    id="general"
-                    value="General Enquiry"
-                  />
-                  <label for="general">Support Request</label>
+                  <label class="radioItem">
+                    <input
+                      class="radioSelection inputCheck"
+                      type="radio"
+                      name="queryType"
+                      id="supportRequest"
+                      value="General Enquiry"
+                    />Support Request
+                  </label>
                 </div>
               </div>
 
-              <div id="firstNameError" class="errorMessage">
+              <div id="queryTypeError" class="errorMessage">
                 Please select a query type
               </div>
             </div>
 
             <div class="inputWrapper">
               <label for="message">Message *</label>
-              <textarea class="textArea" name="message" id=""></textarea>
-              <div id="firstNameError" class="errorMessage">
-                Please enter a valid email address
+              <textarea
+                class="textArea fieldText inputCheck"
+                name="message"
+                id="message"
+              ></textarea>
+              <div id="messageError" class="errorMessage">
+                Please enter your message
               </div>
             </div>
 
             <div class="inputWrapper checkBoxWrapper">
-              <input type="checkbox" name="consent" id="" />
-              <label for="consent"
-                >I consent to being contacted by the team</label
-              >
+              <label class="checkItem">
+                <input
+                  class="checkboxSelection inputCheck"
+                  type="checkbox"
+                  name="consent"
+                  id="consent"
+                />I consent to being contacted by the team
+              </label>
             </div>
 
-            button
+            <button class="primaryButton" type="submit" id="submitForm">
+              Submit
+            </button>
           </form>
         </div>
       </div>
     </section>
 
+    <!-- TOAST -->
+    <div class="toatContainer">
+      <div class="toastWrapper">
+        <div class="toastTitle mb-16">
+          <img src="assets/images/icon-success-check.svg" />
+          <p class="subHeading-1">Message Sent!</p>
+        </div>
+        <div class="toatsBody">
+          <p class="smallBodyText">
+            Thanks for completing the form. We'll be in touch soon
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Farel Darari Deksano</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

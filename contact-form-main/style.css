@@ -13,23 +13,65 @@ body {
   font-family: "Karla", sans-serif;
   color: hsl(187, 24%, 22%);
   background-color: hsl(148, 38%, 91%);
+  position: relative;
 }
 
 label {
   font-family: "Karla", sans-serif;
   font-size: 1.6rem;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
 /* FONT STYLE */
 .header-1 {
   font-size: 3.2rem;
   font-weight: 700;
 }
+.subHeading-1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.smallBodyText {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
 
 /* LAYOUT */
 .container {
-  max-width: 660px;
+  max-width: 900px;
   margin: 0 auto;
+}
+.mb-40 {
+  margin-bottom: 4rem;
+}
+.mb-16 {
+  margin-bottom: 1.6rem;
+}
+
+/* BUTTON */
+.primaryButton {
+  border: none;
+  padding: 12px 16px;
+  width: 100%;
+  background-color: hsl(169, 82%, 27%);
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.primaryButton:hover {
+  background-color: hsla(169, 82%, 27%, 0.856);
 }
 
 /* FORM STYLING */
@@ -43,7 +85,7 @@ label {
 .formContainer {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 3.2rem;
 }
 .inputWrapper {
   display: flex;
@@ -53,19 +95,24 @@ label {
 .inputRow {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 3.2rem;
 }
 .checkBoxWrapper {
   flex-direction: row;
 }
 
-.inputField {
+.inputField,
+.textArea {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
   padding: 16px 12px;
   border-radius: 4px;
   border: 1px solid hsl(186, 15%, 59%);
 }
 .inputField:focus,
-.inputField:focus-visible {
+.inputField:focus-visible,
+.textArea:focus,
+.textArea:focus-visible {
   border-color: hsl(169, 82%, 27%);
   outline: 1px solid hsl(169, 82%, 27%);
   background-color: hsla(169, 82%, 27%, 0.034);
@@ -79,14 +126,105 @@ label {
   font-size: 1.6rem;
   color: hsl(0, 66%, 54%);
 }
+.showError {
+  display: inline-block;
+}
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.6rem;
 }
 .radioWrapper {
+  height: auto;
+}
+.radioItem {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 16px 12px;
   border-radius: 4px;
   border: 1px solid hsl(186, 15%, 59%);
+}
+.radioItem input {
+  width: 16px;
+  height: 16px;
+}
+
+.radioItem input:checked {
+  accent-color: hsl(169, 82%, 27%);
+}
+
+.radioItem:has(.radioSelection:checked) {
+  background-color: hsl(148, 38%, 91%);
+  border-color: hsl(169, 82%, 27%);
+}
+
+.textArea {
+  min-height: 120px;
+}
+
+.checkItem {
+  cursor: pointer;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.checkboxSelection {
+  width: 16px;
+  height: 16px;
+}
+.checkboxSelection:checked {
+  accent-color: hsl(169, 82%, 27%);
+}
+
+/* TOAST */
+.toatContainer {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  width: calc(100% - 24px);
+  padding: 24px;
+  background-color: hsl(170, 90%, 15%);
+  color: #fff;
+  box-shadow: 7px 19px 21px 3px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 7px 19px 21px 3px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 7px 19px 21px 3px rgba(0, 0, 0, 0.14);
+}
+.toastTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .contactUsWrapper {
+    padding: 40px;
+  }
+  .inputRow {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .inputRow .inputWrapper {
+    width: 100%;
+  }
+  .wrapper {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .radioWrapper {
+    width: 100%;
+  }
+
+  /* TOASTS */
+  .toatContainer {
+    padding: 32px;
+    width: fit-content;
+  }
 }
