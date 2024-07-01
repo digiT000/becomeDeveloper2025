@@ -37,7 +37,7 @@
       <div class="container">
         <div class="contactUsWrapper">
           <h1 class="header-1 mb-40">Contact Us</h1>
-          <form class="formContainer" method="post" novalidate>
+          <form class="formContainer" novalidate>
             <div class="inputRow">
               <div class="inputWrapper">
                 <label for="firstName"
@@ -139,6 +139,9 @@
                   id="consent"
                 />I consent to being contacted by the team
               </label>
+              <div id="consentError" class="errorMessage">
+                To submit this form, please consent to being contacted
+              </div>
             </div>
 
             <button class="primaryButton" type="submit" id="submitForm">
@@ -150,7 +153,7 @@
     </section>
 
     <!-- TOAST -->
-    <div class="toatContainer">
+    <div id="toastSuccess" class="toatContainer">
       <div class="toastWrapper">
         <div class="toastTitle mb-16">
           <img src="assets/images/icon-success-check.svg" />

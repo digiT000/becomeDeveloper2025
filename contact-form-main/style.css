@@ -98,7 +98,7 @@ p {
   gap: 3.2rem;
 }
 .checkBoxWrapper {
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .inputField,
@@ -185,7 +185,7 @@ p {
 .toatContainer {
   display: none;
   position: fixed;
-  top: 16px;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 4px;
@@ -201,6 +201,55 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.showToast {
+  display: inline-block;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 40px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 40px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 40px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 40px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) {
