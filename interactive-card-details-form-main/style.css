@@ -1,0 +1,242 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  color: hsl(278, 68%, 11%);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* FONT STYLE */
+.smallText {
+  font-size: 1.2rem;
+}
+.inputLabel {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: hsl(278, 68%, 11%);
+}
+.textError {
+  font-size: 1.2rem;
+  color: hsl(0, 100%, 66%);
+  display: none;
+}
+.displayError {
+  display: inline-block;
+}
+.header-1 {
+  font-size: 2.4rem;
+}
+.bigText {
+  font-size: 1.8rem;
+}
+.bodyText {
+  font-size: 1.6rem;
+  color: hsl(279, 6%, 55%);
+}
+
+/* BUTTON */
+.primaryButton {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  width: 100%;
+  border: none;
+  background-color: hsl(278, 68%, 11%);
+  padding: 10px 16px;
+  border-radius: 4px;
+  color: #fff;
+  transition: 0.2s;
+}
+.primaryButton:hover {
+  background-color: hsla(278, 68%, 11%, 0.77);
+}
+
+/* CARD SECTION */
+/* .cardSection {
+  background: url("images/bg-main-mobile.png");
+} */
+.mainBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.mainBg img {
+  width: 100%;
+  height: 40%;
+}
+.cardContainer {
+  padding: 24px 20px;
+}
+.frontCardContainer {
+  margin-bottom: -120px;
+}
+.backCard {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-bottom: -85px;
+}
+.backCardImg {
+  width: 100%;
+}
+.cvcText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 13%;
+  transform: translate(-13%, -50%);
+}
+
+.frontCard {
+  position: relative;
+  width: 90%;
+  margin-right: 90%;
+}
+.frontCardImg {
+  width: 100%;
+}
+.cardLogo {
+  width: 32px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.cardNumberText {
+  color: #fff;
+  position: absolute;
+  bottom: 35%;
+  left: 5%;
+}
+.detailWrapper {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 16px;
+  color: #fff;
+}
+
+/* FORM SECTION */
+
+.formSection {
+  padding: 120px 20px 32px 20px;
+  position: relative;
+  z-index: 2;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.inputFormWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.inputFIeld {
+  width: 100%;
+  padding: 12px 8px;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.inputFIeld:hover {
+  background-color: #f8f7f7;
+}
+
+input:focus-visible {
+  outline: 1px solid;
+  outline-color: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.inputFlex {
+  display: flex;
+  gap: 8px;
+}
+.inputWrapper {
+  display: flex;
+  gap: 4px;
+}
+
+/* SUCCESS CONTAINER */
+.hideContainer {
+  display: none;
+}
+.successSection {
+  padding: 120px 20px 32px 20px;
+}
+.successContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.successSection img {
+  width: 72px;
+}
+.bodySuccess {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.attribution {
+  margin-top: 32px;
+}
+.displayError {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 728px) {
+  .formCardSection {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mainBg {
+    left: 0;
+    width: 100%;
+  }
+  .mainBg img {
+    width: 35%;
+    height: 100%;
+  }
+  .formCardSection {
+    display: flex;
+    gap: 80px;
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .frontCardContainer {
+    margin-bottom: 0;
+  }
+  .frontCard {
+    width: 100%;
+  }
+  .backCard {
+    width: 100%;
+    margin-left: 40px;
+  }
+}

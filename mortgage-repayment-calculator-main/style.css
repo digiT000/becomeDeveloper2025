@@ -1,0 +1,224 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: hsl(202, 55%, 16%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* FONT STYLE */
+.labelField {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.header-1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.header-2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.bodyText {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+/* COLOR */
+.error {
+  color: hsl(4, 69%, 50%);
+}
+.textWhite {
+  color: hsl(203, 41%, 72%);
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+.textLink {
+  padding-left: 0;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.primaryButton {
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  background-color: hsl(61, 70%, 52%);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* LAYOUT */
+.mb-8 {
+  margin-bottom: 8px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* CONTAINER WRAPPER */
+.formHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 2.4rem;
+}
+.mortgageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.formContatiner {
+  padding: 20px;
+}
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* INPUT FIELD */
+.inputField {
+  position: relative;
+  overflow: hidden;
+}
+.inputItem {
+  width: 100%;
+  padding: 18px;
+  padding-left: 48px;
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: hsl(202, 55%, 16%);
+}
+
+input[type="number"]:focus,
+input[type="number"]:focus-visible {
+  border: 1px solid red;
+}
+.iconContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  background-color: hsl(202, 86%, 94%);
+  border-right: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  z-index: -1;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.errorMessage {
+  display: none;
+  margin-top: 4px;
+}
+
+/* INPUT FORM */
+.inputWithRightIcon {
+  padding-left: 16px;
+}
+.rightIcon {
+  right: 0;
+}
+
+.inputTerms::-webkit-outer-spin-button,
+.inputTerms::-webkit-inner-spin-button {
+  margin-right: 64px;
+}
+
+.inputInterest::-webkit-outer-spin-button,
+.inputInterest::-webkit-inner-spin-button {
+  margin-right: 32px;
+}
+.radioContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radioItem:has(.radioSelection:checked) {
+  background-color: hsl(61, 70%, 52%, 25%);
+  border: 2px solid hsl(61, 70%, 52%);
+}
+
+.radioItem {
+  border: 1px solid hsl(200, 24%, 40%);
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+input[type="radio"]:checked {
+  accent-color: hsl(61, 70%, 52%) !important;
+}
+
+/* RESULT CONTAINER */
+.resultContainer {
+  padding: 24px;
+  background-color: hsl(202, 55%, 16%);
+  color: #fff;
+}
+.emptyResult {
+  text-align: center;
+}
+.showResult {
+  display: none;
+}
+.resultBody {
+  padding: 24px;
+  background-color: hsl(203, 63%, 7%);
+  border-radius: 12px;
+  border-top: 2px solid hsl(61, 70%, 52%);
+}

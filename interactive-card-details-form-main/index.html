@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="formCardSection">
+        <div class="cardSection">
+          <div class="mainBg">
+            <img src="images/bg-main-mobile.png" alt="" />
+          </div>
+          <div class="cardContainer">
+            <div class="backCard">
+              <img class="backCardImg" src="images/bg-card-back.png" alt="" />
+              <p class="smallText cvcText" id="cvcCard">000</p>
+            </div>
+
+            <div class="cardContainer frontCardContainer">
+              <div class="frontCard">
+                <img class="frontCardImg" src="images/bg-card-front.png" />
+                <img class="cardLogo" src="images/card-logo.svg" />
+                <p class="bigText cardNumberText" id="cardNumber">
+                  0000 0000 0000 0000
+                </p>
+                <div class="detailWrapper">
+                  <p class="smallText cardHolderNameText" id="cardholderName">
+                    Your Name
+                  </p>
+                  <p class="smallText exCardDateText" id="expCardDate">
+                    <span id="expMonth">00</span>/<span id="expYear">00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="formSection">
+          <form method="POST" class="formContainer">
+            <div class="inputFormWrapper">
+              <label class="inputLabel" for="">CARDHOLDER NAME</label>
+              <input class="inputFIeld" id="cardHolderField" type="text" />
+              <p class="textError" id="cardHolderError">Can't be blank</p>
+            </div>
+            <div class="inputFormWrapper">
+              <label class="inputLabel" for="">CARD NUBMER</label>
+              <input class="inputFIeld" id="cardNumberField" maxlength="" />
+              <p class="textError" id="cardNumberError">
+                Wrong format, numbers only
+              </p>
+            </div>
+            <div class="inputFlex">
+              <div class="inputFormWrapper">
+                <label class="inputLabel" for="">EXP. DATE (MM/YY)</label>
+                <div class="inputWrapper">
+                  <input
+                    class="inputFIeld"
+                    id="cardMonthField"
+                    type="text"
+                    pattern="\d*"
+                    maxlength="2"
+                    inputmode="numeric"
+                  />
+                  <input
+                    class="inputFIeld"
+                    id="cardYearField"
+                    type="text"
+                    pattern="\d*"
+                    maxlength="2"
+                    inputmode="numeric"
+                  />
+                </div>
+                <p class="textError" id="dateError">Can't be blank</p>
+              </div>
+              <div class="inputFormWrapper">
+                <label class="inputLabel" for="">CVC</label>
+                <input
+                  class="inputFIeld"
+                  id="cardCvcField"
+                  type="text"
+                  pattern="\d*"
+                  maxlength="3"
+                  inputmode="numeric"
+                />
+                <p class="textError" id="cvcError">Can't be blank</p>
+              </div>
+            </div>
+
+            <button
+              class="primaryButton"
+              type="submit"
+              id="confirmButton"
+              onclick=" return validationForm(event)"
+            >
+              Confirm
+            </button>
+          </form>
+          <div class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+          </div>
+        </div>
+
+        <div class="successSection hideContainer">
+          <div class="successContainer">
+            <img src="images/icon-complete.svg" />
+            <div class="bodySuccess">
+              <h1 class="header-1">THANK YOU</h1>
+              <p class="bodyText">We've added your card details</p>
+            </div>
+            <button class="primaryButton" id="confirmButton" type="button">
+              Continue
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Completed state start -->
+
+    Thank you! We've added your card details Continue
+    <script src="script.js"></script>
+  </body>
+</html>
