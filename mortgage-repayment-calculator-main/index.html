@@ -34,154 +34,124 @@
   </head>
   <body>
     <!-- Your users should be able to: 
-
 - Input mortgage information and see monthly repayment and total repayment amounts after submitting the form
 - See form validation messages if any field is incomplete
 - Complete the form only using their keyboard
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page -->
 
-    <section class="mortgageSection">
+    <section class="formContainer">
       <div class="container">
-        <div class="mortgageWrapper">
-          <div class="formContatiner">
-            <div class="formHeaderWrapper">
+        <div class="form">
+          <form action="" method="post">
+            <div class="headerForm">
               <h1 class="header-1">Mortgage Calculator</h1>
-              <button class="btn textLink" type="reset">Clear All</button>
+              <button class="textLink" type="reset">Clear All</button>
             </div>
-
-            <form action="" class="formWrapper">
-              <div class="inputWrapper">
-                <label class="labelField" for="mortgageAmount"
-                  >Mortgage Amount</label
+            <div class="bodyForm">
+              <div class="inpWrapper">
+                <label class="labelField" for="inpMortgage"
+                  >Mortgage Ammount</label
                 >
-                <div class="inputField">
-                  <div class="iconContainer">
-                    <p>£</p>
-                  </div>
+                <div class="inpIconWrapper">
+                  <div class="textIcon leftIcon">£</div>
                   <input
-                    class="inputItem"
+                    class="inpField inpLeftIcon"
                     type="number"
-                    name="ammount"
-                    id="mortgageAmount"
+                    name="inpMortgage"
+                    id="inpMortgage"
                   />
-                </div>
-                <div id="ammountError" class="errorMessage">
-                  <p class="labelField error">This field is required</p>
                 </div>
               </div>
 
-              <div class="inputWrapper">
-                <label class="labelField" for="mortgageTerms"
-                  >Mortgage Term</label
-                >
-                <div class="inputField">
+              <div class="inpWrapper">
+                <label class="labelField" for="inpTerms">Mortgage Term</label>
+                <div class="inpIconWrapper">
                   <input
-                    class="inputItem inputWithRightIcon inputTerms"
+                    class="inpField"
                     type="number"
-                    name="term"
-                    id="mortgageTerms"
+                    name="inpTerms"
+                    id="inpTerms"
                   />
-                  <div class="iconContainer rightIcon">
-                    <p>years</p>
-                  </div>
-                </div>
-                <div id="termError" class="errorMessage">
-                  <p class="labelField error">This field is required</p>
+                  <div class="textIcon rightIcon">Years</div>
                 </div>
               </div>
-              <div class="inputWrapper">
-                <label class="labelField" for="interestRate"
+
+              <div class="inpWrapper">
+                <label class="labelField" for="inpInterest"
                   >Interest Rate</label
                 >
-                <div class="inputField">
+                <div class="inpIconWrapper">
                   <input
-                    class="inputItem inputWithRightIcon inputInterest"
+                    class="inpField"
                     type="number"
-                    name="inputField "
-                    id="interestRate"
+                    name="inpMortgage"
+                    id="inpMortgage"
                   />
-                  <div class="iconContainer rightIcon">
-                    <p>%</p>
-                  </div>
-                </div>
-                <div id="ammountError" class="errorMessage">
-                  <p class="labelField error">This field is required</p>
+                  <div class="textIcon rightIcon">%</div>
                 </div>
               </div>
-              <div class="inputWrapper">
-                <label class="labelField" for="mortgageTerms"
-                  >Mortgage Type</label
-                >
-                <div class="radioContainer">
-                  <div class="radioWrapper">
-                    <label class="radioItem">
-                      <input
-                        class="radioSelection inputCheck"
-                        type="radio"
-                        name="mortgageType"
-                        id="repaymentType"
-                        value="1"
-                      />Repayment
-                    </label>
-                  </div>
 
-                  <div class="radioWrapper">
-                    <label class="radioItem">
-                      <input
-                        class="radioSelection inputCheck"
-                        type="radio"
-                        name="mortgageType"
-                        id="interestOnly"
-                        value="2"
-                      />Interest Only
-                    </label>
-                  </div>
+              <div class="inpWrapper">
+                <label class="labelField" for="inpType">Mortgage type</label>
+                <div class="radioWrapper">
+                  <input
+                    class="inpRadio"
+                    type="radio"
+                    name="inpType"
+                    id="radRepayment"
+                    value="Repayment"
+                  />
+                  <label for="radRepayment">Repayment</label>
                 </div>
 
-                <div id="ammountError" class="errorMessage">
-                  <p class="labelField error">This field is required</p>
+                <div class="radioWrapper">
+                  <input
+                    class="inpRadio"
+                    type="radio"
+                    name="inpType"
+                    id="radInterest"
+                    value="Interest Only"
+                  />
+                  <label for="radInterest">Interest Only</label>
                 </div>
               </div>
-              <button class="btn primaryButton" type="submit">
-                <img src="assets/images/icon-calculator.svg" />
-                Calculate <span id="mortgageType"></span>
+            </div>
+
+            <div class="formFooter">
+              <button type="submit">
+                <span></span>Calculate <span id="resultRepaymentType"></span>
               </button>
-            </form>
-          </div>
-
-          <div class="resultWrapper">
-            <!-- Empty results start -->
-            <div class="resultContainer emptyResult">
-              <img src="assets/images/illustration-empty.svg" />
-              <h2 class="header-2 mb-20">Result shown here</h2>
-              <p class="bodyText textWhite">
-                Complete the form and click “calculate repayments” to see what
-                your monthly repayments would be.
-              </p>
             </div>
-            <!-- Empty results end -->
+          </form>
+        </div>
+        <div class="result">
+          <div class="emptyResult">
+            <img src="assets/images/illustration-empty.svg" />
+            <h2 class="header-2">Result shown here</h2>
+            <p class="bodyText-1">
+              Complete the form and click "Calculatre Repayments" to see what
+              your monthly repayments would be
+            </p>
+          </div>
+          <div class="showResult">
+            <h2 class="header-2">Your Result</h2>
+            <p class="bodyText-1">
+              Your result are shown below based on the information you provided.
+              To adjust the results, edit the form and click "Calculate
+              repayments" again
+            </p>
 
-            <!-- Completed results start -->
-            <div class="resultContainer showResult">
-              <h2 class="header-2 mb-20">Your Result</h2>
-              <p class="bodyText textWhite mb-20">
-                Your results Your results are shown below based on the
-                information you provided. To adjust the results, edit the form
-                and click “calculate repayments” again
-              </p>
-
-              <div class="resultBody">
-                <p class="bodyText textWhite mb-8">Your monthly repayments</p>
-                <p class="bigText mb-20">£ <span id="monthlyPayment"></span></p>
-                <hr class="mb-20" />
-                <p class="bodyText textWhite mb-8">
-                  Total you'll reapy over the term
-                </p>
-                <p class="mediumText">£ <span id="totalPayment"></span></p>
+            <div class="resultContainer">
+              <div class="monthlyRepaymnet">
+                <p class="bodyText-2">your monthly repayments</p>
+                <h2 class="header-2" id="resMonthlyRepayment"></h2>
+              </div>
+              <div class="totalRepay">
+                <p class="bodyText-2">Total you'll repay over the terms</p>
+                <h2 class="header-2" id="resTotalRepay"></h2>
               </div>
             </div>
-            <!-- Completed results end -->
           </div>
         </div>
       </div>
