@@ -43,7 +43,7 @@
     <section class="formContainer">
       <div class="container">
         <div class="form">
-          <form action="" method="post">
+          <form class="formWrapper" action="" method="post">
             <div class="headerForm">
               <h1 class="header-1">Mortgage Calculator</h1>
               <button class="textLink" type="reset">Clear All</button>
@@ -62,33 +62,43 @@
                     id="inpMortgage"
                   />
                 </div>
+                <p id="inpMortgageError" class="textError">
+                  This field is required
+                </p>
               </div>
-
-              <div class="inpWrapper">
-                <label class="labelField" for="inpTerms">Mortgage Term</label>
-                <div class="inpIconWrapper">
-                  <input
-                    class="inpField"
-                    type="number"
-                    name="inpTerms"
-                    id="inpTerms"
-                  />
-                  <div class="textIcon rightIcon">Years</div>
+              <div class="flexWrapper">
+                <div class="inpWrapper">
+                  <label class="labelField" for="inpTerms">Mortgage Term</label>
+                  <div class="inpIconWrapper">
+                    <input
+                      class="inpField"
+                      type="number"
+                      name="inpTerms"
+                      id="inpTerms"
+                    />
+                    <div class="textIcon rightIcon">Years</div>
+                  </div>
+                  <p id="inpTermsError" class="textError">
+                    This field is required
+                  </p>
                 </div>
-              </div>
 
-              <div class="inpWrapper">
-                <label class="labelField" for="inpInterest"
-                  >Interest Rate</label
-                >
-                <div class="inpIconWrapper">
-                  <input
-                    class="inpField"
-                    type="number"
-                    name="inpMortgage"
-                    id="inpMortgage"
-                  />
-                  <div class="textIcon rightIcon">%</div>
+                <div class="inpWrapper">
+                  <label class="labelField" for="inpInterest"
+                    >Interest Rate</label
+                  >
+                  <div class="inpIconWrapper">
+                    <input
+                      class="inpField"
+                      type="number"
+                      name="inpInterest"
+                      id="inpInterest"
+                    />
+                    <div class="textIcon rightIcon">%</div>
+                  </div>
+                  <p id="inpInterestError" class="textError">
+                    This field is required
+                  </p>
                 </div>
               </div>
 
@@ -102,6 +112,7 @@
                     id="radRepayment"
                     value="Repayment"
                   />
+                  <span class="backgroundRadio"></span>
                   <label for="radRepayment">Repayment</label>
                 </div>
 
@@ -113,30 +124,37 @@
                     id="radInterest"
                     value="Interest Only"
                   />
+                  <span class="backgroundRadio"></span>
                   <label for="radInterest">Interest Only</label>
                 </div>
+
+                <p id="inpTypeError" class="textError">
+                  This field is required
+                </p>
               </div>
             </div>
 
             <div class="formFooter">
-              <button type="submit">
-                <span></span>Calculate <span id="resultRepaymentType"></span>
+              <button class="primaryButton" type="submit">
+                <span
+                  ><img src="assets/images/icon-calculator.svg" alt="" /></span
+                >Calculate Repayments
               </button>
             </div>
           </form>
         </div>
         <div class="result">
-          <div class="emptyResult">
+          <div class="mainContainerResult emptyResult">
             <img src="assets/images/illustration-empty.svg" />
             <h2 class="header-2">Result shown here</h2>
-            <p class="bodyText-1">
+            <p class="bodyText-1 secondaryText">
               Complete the form and click "Calculatre Repayments" to see what
               your monthly repayments would be
             </p>
           </div>
-          <div class="showResult">
+          <div class="mainContainerResult hideResult">
             <h2 class="header-2">Your Result</h2>
-            <p class="bodyText-1">
+            <p class="bodyText-1 secondaryText">
               Your result are shown below based on the information you provided.
               To adjust the results, edit the form and click "Calculate
               repayments" again
@@ -144,12 +162,14 @@
 
             <div class="resultContainer">
               <div class="monthlyRepaymnet">
-                <p class="bodyText-2">your monthly repayments</p>
-                <h2 class="header-2" id="resMonthlyRepayment"></h2>
+                <p class="bodyText-2 secondaryText">your monthly repayments</p>
+                <h2 class="bigHeader" id="resMonthlyRepayment">£1,313.11</h2>
               </div>
               <div class="totalRepay">
-                <p class="bodyText-2">Total you'll repay over the terms</p>
-                <h2 class="header-2" id="resTotalRepay"></h2>
+                <p class="bodyText-2 secondaryText">
+                  Total you'll repay over the terms
+                </p>
+                <h2 class="header-1" id="resTotalRepay">£1,313.11</h2>
               </div>
             </div>
           </div>
