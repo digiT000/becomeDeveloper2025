@@ -30,6 +30,7 @@ p {
 .bigHeader {
   font-size: 4rem;
   font-weight: 700;
+  color: hsl(61, 70%, 52%);
 }
 .header-1 {
   font-size: 2.4rem;
@@ -54,6 +55,9 @@ p {
   color: hsl(4, 69%, 50%);
   font-weight: 500;
   display: none;
+}
+.showTextError {
+  display: inline-block;
 }
 .showError {
   display: inline-block;
@@ -94,6 +98,11 @@ p {
   border: none;
   border-radius: 100px;
   width: 100%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.primaryButton:hover {
+  background-color: hsl(61, 76%, 59%);
 }
 
 /* FORM CONTAINER */
@@ -251,10 +260,25 @@ input:focus-visible {
 .hideResult {
   display: none;
 }
+.attribution {
+  margin-top: 24px;
+}
 
 @media only screen and (min-width: 720px) {
+  .formContainer {
+    height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
   .container {
     flex-direction: row;
+    align-items: center;
+    height: 100%;
+  }
+  .headerForm {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .form,
   .result {
@@ -262,6 +286,7 @@ input:focus-visible {
     padding: 40px;
   }
   .result {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

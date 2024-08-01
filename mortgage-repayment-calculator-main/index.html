@@ -33,20 +33,15 @@
     </style>
   </head>
   <body>
-    <!-- Your users should be able to: 
-- Input mortgage information and see monthly repayment and total repayment amounts after submitting the form
-- See form validation messages if any field is incomplete
-- Complete the form only using their keyboard
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page -->
-
     <section class="formContainer">
       <div class="container">
         <div class="form">
           <form class="formWrapper" action="" method="post">
             <div class="headerForm">
               <h1 class="header-1">Mortgage Calculator</h1>
-              <button class="textLink" type="reset">Clear All</button>
+              <button class="textLink" id="resetForm" type="reset">
+                Clear All
+              </button>
             </div>
             <div class="bodyForm">
               <div class="inpWrapper">
@@ -75,6 +70,7 @@
                       type="number"
                       name="inpTerms"
                       id="inpTerms"
+                      inputmode="numeric"
                     />
                     <div class="textIcon rightIcon">Years</div>
                   </div>
@@ -106,11 +102,12 @@
                 <label class="labelField" for="inpType">Mortgage type</label>
                 <div class="radioWrapper">
                   <input
-                    class="inpRadio"
+                    class="inpRadio inpType"
                     type="radio"
                     name="inpType"
                     id="radRepayment"
                     value="Repayment"
+                    checked
                   />
                   <span class="backgroundRadio"></span>
                   <label for="radRepayment">Repayment</label>
@@ -118,7 +115,7 @@
 
                 <div class="radioWrapper">
                   <input
-                    class="inpRadio"
+                    class="inpRadio inpType"
                     type="radio"
                     name="inpType"
                     id="radInterest"
@@ -135,16 +132,22 @@
             </div>
 
             <div class="formFooter">
-              <button class="primaryButton" type="submit">
+              <button class="primaryButton" type="submit" id="submitForm">
                 <span
                   ><img src="assets/images/icon-calculator.svg" alt="" /></span
                 >Calculate Repayments
               </button>
             </div>
           </form>
+          <div class="attribution">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge"
+              >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+          </div>
         </div>
         <div class="result">
-          <div class="mainContainerResult emptyResult">
+          <div class="mainContainerResult emptyResult" id="emptyState">
             <img src="assets/images/illustration-empty.svg" />
             <h2 class="header-2">Result shown here</h2>
             <p class="bodyText-1 secondaryText">
@@ -152,7 +155,7 @@
               your monthly repayments would be
             </p>
           </div>
-          <div class="mainContainerResult hideResult">
+          <div class="mainContainerResult hideResult" id="filledState">
             <h2 class="header-2">Your Result</h2>
             <p class="bodyText-1 secondaryText">
               Your result are shown below based on the information you provided.
@@ -160,16 +163,22 @@
               repayments" again
             </p>
 
-            <div class="resultContainer">
+            <div class="resultContainer filledState">
               <div class="monthlyRepaymnet">
-                <p class="bodyText-2 secondaryText">your monthly repayments</p>
-                <h2 class="bigHeader" id="resMonthlyRepayment">£1,313.11</h2>
+                <p class="bodyText-2 secondaryText" id="resTextType-1">
+                  your monthly repayments
+                </p>
+                <h2 class="bigHeader">
+                  <span>£</span><span id="resValue-1"></span>
+                </h2>
               </div>
               <div class="totalRepay">
-                <p class="bodyText-2 secondaryText">
+                <p class="bodyText-2 secondaryText" id="resTextType-2">
                   Total you'll repay over the terms
                 </p>
-                <h2 class="header-1" id="resTotalRepay">£1,313.11</h2>
+                <h2 class="header-1" id="">
+                  <span>£</span><span id="resValue-2"></span>
+                </h2>
               </div>
             </div>
           </div>
@@ -177,10 +186,6 @@
       </div>
     </section>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <script src="script.js"></script>
   </body>
 </html>
