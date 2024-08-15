@@ -50,11 +50,11 @@
               <img src="assets/images/illustration-empty-cart.svg" alt="" />
               <p class="bodyText">Your added items will apper hear</p>
             </div>
-            <div class="cartBodyContainer cartFillState">
+            <div class="cartBodyContainer cartFillState hideCartState">
               <div class="listCartItem"></div>
               <div class="totalOrder">
                 <p class="bodyText">Order Total</p>
-                <h2 class="heading-2">$46.50</h2>
+                <h2 id="totalOrderPrice" class="heading-2">$46.50</h2>
               </div>
               <div class="carbonContainer">
                 <img src="assets/images/icon-carbon-neutral.svg" alt="" />
@@ -62,7 +62,11 @@
                   This is a <strong>carbon-neutral </strong>delivery
                 </p>
               </div>
-              <button class="secondaryButton" type="submit">
+              <button
+                id="confirmOrderBtn"
+                class="secondaryButton"
+                type="submit"
+              >
                 Confirm Order
               </button>
             </div>
@@ -75,6 +79,31 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <div class="modalWrapper hideContainer">
+      <div class="overlay">
+        <div class="modalContainer">
+          <div class="modalHeader">
+            <img class="mb-24" src="assets/images/icon-order-confirmed.svg" />
+            <h1 class="heading-1 mb-12">Order Confirmed</h1>
+            <p class="bodyText">We hope you enjoy your food</p>
+          </div>
+
+          <div class="modalBody">
+            <div class="listCartItem"></div>
+            <div class="totalOrder">
+              <p class="bodyText">Order Total</p>
+              <h2 id="totalOrderPriceModal" class="heading-2">$46.50</h2>
+            </div>
+          </div>
+          <div class="modalFooter">
+            <button id="newOrderBtn" class="secondaryButton">
+              Start New Order
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
