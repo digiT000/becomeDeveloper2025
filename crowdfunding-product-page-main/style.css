@@ -1,0 +1,120 @@
+/* REMOVE BOX SIZIN CONTENT BOX SO WE DONT GET AN UNEXPECETED HEIGHT OR WIDTH */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --neutral-900: hsl(0, 0%, 0%);
+}
+
+/* SET FONT SIZE TO 10PX BY DEFAULT */
+html {
+  font-size: 10px;
+}
+
+/* REMOVE MARGIN PADDING FROM BODY */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(173, 100%, 98%);
+  font-family: "Commissioner", sans-serif;
+  color: var(--neutral-900);
+}
+
+/* REMOVE MARGIN FROM ALL TEXT ELEMENT */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* GLOBAL CLASS */
+.container {
+  padding: 0 16px;
+}
+
+/* BUTTON */
+.primaryButton {
+  width: 100%;
+  padding: 16px 12px;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+
+  border-radius: 24px;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+.iconButton {
+  border: none;
+  background-color: transparent;
+}
+.iconButton img {
+  width: 100%;
+  height: 100%;
+}
+
+/* TEXT ELEMENT */
+.heading-1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.bodyText {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 145%;
+  color: hsl(0, 0%, 48%);
+}
+.sectionContenWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* SECTION HEADER */
+.headerContainer {
+  min-height: 280px;
+
+  background-image: url("images/image-hero-mobile.jpg");
+  background-size: cover;
+
+  margin-bottom: -60px;
+}
+.navigationBar {
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentWrapper {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #dedede5c;
+}
+.flexContentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.logoProject {
+  width: 64px;
+  margin-top: -60px;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
