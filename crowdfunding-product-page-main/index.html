@@ -48,17 +48,18 @@
     </header>
 
     <section class="container projectHeaderSection">
-      <div class="contentWrapper flexContentWrapper">
+      <div class="contentWrapper flexContentWrapper contentCenter">
         <img
           class="logoProject"
           src="images/logo-mastercraft.svg"
           alt="logo Mastercraft"
         />
         <div class="sectionContenWrapper">
-          <h1 class="heading-1">Mastercraft Bamboo Monitor Riser</h1>
-          <p class="bodyText">
-            A beautifully handcrafted monitor stand to reduce neck and eye
-            strain
+          <h1 id="project_title" class="heading-1">
+            <!-- It will display project title -->
+          </h1>
+          <p id="project_summary" class="bodyText">
+            <!-- It will display project summary -->
           </p>
         </div>
         <div class="buttonWrapper">
@@ -69,24 +70,113 @@
         </div>
       </div>
     </section>
-    div. About Discover Get Started Mastercraft Bamboo Monitor Riser A beautiful
-    & handcrafted monitor stand to reduce neck and eye strain. Back this project
-    Bookmark $89,914 of $100,000 backed 5,007 total backers 56 days left About
-    this project The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
-    platform that elevates your screen to a more comfortable viewing height.
-    Placing your monitor at eye level has the potential to improve your posture
-    and make you more comfortable while at work, helping you stay focused on the
-    task at hand. Featuring artisan craftsmanship, the simplicity of design
-    creates extra desk space below your computer to allow notepads, pens, and
-    USB sticks to be stored under the stand. Bamboo Stand Pledge $25 or more You
-    get an ergonomic stand made of natural bamboo. You've helped us launch our
-    promotional campaign, and you’ll be added to a special Backer member list.
-    101 left Select Reward Black Edition Stand Pledge $75 or more You get a
-    Black Special Edition computer stand and a personal thank you. You’ll be
-    added to our Backer member list. Shipping is included. 64 left Select Reward
-    Mahogany Special Edition Pledge $200 or more You get two Special Edition
-    Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-    to our Backer member list. Shipping is included. 0 left Out of Stock
+
+    <section class="container overallProjectSection">
+      <div class="contentWrapper">
+        <div class="proofItem contentCenter">
+          <h1 class="heading-1">
+            $<span id="current_projectValue">89.231</span>
+          </h1>
+          <p class="bodyText">
+            of $<span id="project_target">100.000</span> backed
+          </p>
+          <hr class="sepLine" />
+        </div>
+        <div class="proofItem contentCenter">
+          <h1 id="total_backer" class="heading-1">5.007</h1>
+          <p class="bodyText">total backers</p>
+          <hr class="sepLine" />
+        </div>
+        <div class="proofItem contentCenter">
+          <h1 id="remaining_time" class="heading-1">56</h1>
+          <p class="bodyText">days left</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container projectBodySection">
+      <div class="contentWrapper flexContentWrapper">
+        <div class="sectionContenWrapper sectinonProjectdesciption">
+          <h2 class="heading-2">About this project</h2>
+          <p id="project_description" class="bodyText">
+            The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
+            platform that elevates your screen to a more comfortable viewing
+            height. Placing your monitor at eye level has the potential to
+            improve your posture and make you more comfortable while at work,
+            helping you stay focused on the task at hand.
+            <br />
+            <br />
+            Featuring artisan craftsmanship, the simplicity of design creates
+            extra desk space below your computer to allow notepads, pens, and
+            USB sticks to be stored under the stand.
+          </p>
+        </div>
+        <div class="sectionListProduct">
+          <div class="productItem">
+            <div class="productItemHeader">
+              <h3 class="heading-3 product_name">Bamboo Stand</h3>
+              <p class="bodyText-500 colorPrice">
+                Pledge $<span class="product_price">25</span> or more
+              </p>
+            </div>
+            <div class="productItemBody">
+              <p class="bodyText product_item_decription">
+                You get an ergonomic stand made you’ll be added to a special
+                Backer member list
+              </p>
+            </div>
+            <div class="productItemFooter">
+              <h2 class="heading-2 product_stock">
+                101 <span class="bodyText">left</span>
+              </h2>
+              <button class="primaryButton selectProduct">Select Reward</button>
+            </div>
+          </div>
+
+          <div class="productItem">
+            <div class="productItemHeader">
+              <h3 class="heading-3 product_name">Bamboo Stand</h3>
+              <p class="bodyText-500 colorPrice">
+                Pledge $<span class="product_price">25</span> or more
+              </p>
+            </div>
+            <div class="productItemBody">
+              <p class="bodyText product_item_decription">
+                You get an ergonomic stand made you’ll be added to a special
+                Backer member list
+              </p>
+            </div>
+            <div class="productItemFooter">
+              <h2 class="heading-2 product_stock">
+                101 <span class="bodyText">left</span>
+              </h2>
+              <button class="primaryButton selectProduct">Select Reward</button>
+            </div>
+          </div>
+
+          <div class="productItem">
+            <div class="productItemHeader">
+              <h3 class="heading-3 product_name">Bamboo Stand</h3>
+              <p class="bodyText-500 colorPrice">
+                Pledge $<span class="product_price">25</span> or more
+              </p>
+            </div>
+            <div class="productItemBody">
+              <p class="bodyText product_item_decription">
+                You get an ergonomic stand made you’ll be added to a special
+                Backer member list
+              </p>
+            </div>
+            <div class="productItemFooter">
+              <h2 class="heading-2 product_stock">
+                101 <span class="bodyText">left</span>
+              </h2>
+              <button class="primaryButton selectProduct">Select Reward</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Selection modal start -->
 
@@ -127,5 +217,7 @@
     campaign is completed. Got it!
 
     <!-- Success modal end -->
+
+    <script src="script.js"></script>
   </body>
 </html>
