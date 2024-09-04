@@ -63,16 +63,17 @@
           </p>
         </div>
         <div class="buttonWrapper">
-          <button class="primaryButton">Back this project</button>
+          <button class="primaryButton w-fit-content">Back this project</button>
           <button class="iconButton">
             <img src="images/icon-bookmark.svg" />
+            <p class="iconBtnTxt">Bookmark</p>
           </button>
         </div>
       </div>
     </section>
 
     <section class="container overallProjectSection">
-      <div class="contentWrapper">
+      <div class="contentWrapper proofContentWrapper">
         <div class="proofItem contentCenter">
           <h1 class="heading-1">
             $<span id="current_projectValue">89.231</span>
@@ -80,13 +81,15 @@
           <p class="bodyText">
             of $<span id="project_target">100.000</span> backed
           </p>
-          <hr class="sepLine" />
+          <hr class="horizontalLine" />
         </div>
+        <div class="verticalLine"></div>
         <div class="proofItem contentCenter">
           <h1 id="total_backer" class="heading-1">5.007</h1>
           <p class="bodyText">total backers</p>
-          <hr class="sepLine" />
+          <hr class="horizontalLine" />
         </div>
+        <div class="verticalLine"></div>
         <div class="proofItem contentCenter">
           <h1 id="remaining_time" class="heading-1">56</h1>
           <p class="bodyText">days left</p>
@@ -112,7 +115,7 @@
           </p>
         </div>
         <div class="sectionListProduct">
-          <div class="productItem">
+          <!-- <div class="productItem">
             <div class="productItemHeader">
               <h3 class="heading-3 product_name">Bamboo Stand</h3>
               <p class="bodyText-500 colorPrice">
@@ -152,63 +155,52 @@
               </h2>
               <button class="primaryButton selectProduct">Select Reward</button>
             </div>
-          </div>
-
-          <div class="productItem">
-            <div class="productItemHeader">
-              <h3 class="heading-3 product_name">Bamboo Stand</h3>
-              <p class="bodyText-500 colorPrice">
-                Pledge $<span class="product_price">25</span> or more
-              </p>
-            </div>
-            <div class="productItemBody">
-              <p class="bodyText product_item_decription">
-                You get an ergonomic stand made you’ll be added to a special
-                Backer member list
-              </p>
-            </div>
-            <div class="productItemFooter">
-              <h2 class="heading-2 product_stock">
-                101 <span class="bodyText">left</span>
-              </h2>
-              <button class="primaryButton selectProduct">Select Reward</button>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
 
-    <!-- Selection modal start -->
-
-    Back this project Want to support us in bringing Mastercraft Bamboo Monitor
-    Riser out in the world? Pledge with no reward Choose to support us without a
-    reward if you simply believe in our project. As a backer, you will be signed
-    up to receive product updates via email. Bamboo Stand Pledge $25 or more You
-    get an ergonomic stand made of natural bamboo. You've helped us launch our
-    promotional campaign, and you’ll be added to a special Backer member list.
-    101 left
-
-    <!-- Selected pledge start -->
-    Enter your pledge $25 Continue
-    <!-- Selected pledge end -->
-
-    Black Edition Stand Pledge $75 or more You get a Black Special Edition
-    computer stand and a personal thank you. You’ll be added to our Backer
-    member list. Shipping is included. 64 left
-
-    <!-- Selected pledge start -->
-    Enter your pledge $75 Continue
-    <!-- Selected pledge end -->
-
-    Mahogany Special Edition Pledge $200 or more You get two Special Edition
-    Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-    to our Backer member list. Shipping is included. 0 left
-
-    <!-- Selected pledge  start -->
-    Enter your pledge $200 Continue
-    <!-- Selected pledge end -->
-
-    <!-- Selection modal end -->
+    <div class="modal modalBackProject hideModal">
+      <div class="overlayModal">
+        <div class="modalContainer">
+          <div class="modalHeader">
+            <div class="modalContentWrapper">
+              <h2 class="heading-2">Back this project</h2>
+              <img src="images/icon-close-modal.svg" alt="Close menu" />
+            </div>
+            <p class="bodyText productTitleDescription">
+              Back this project Want to support us in bringing Mastercraft
+              Bamboo Monitor Riser out in the world?
+            </p>
+          </div>
+          <div class="modalBody sectionListProduct listModalProduct">
+            <div class="productItem">
+              <div class="productHeaderModalWrapper">
+                <div class="productItemHeaderWrapper">
+                  <input
+                    type="radio"
+                    name="itemProduct"
+                    class="productSelection"
+                  />
+                  <div class="productItemHeader">
+                    <h3 class="heading-3 product_name">
+                      Pledge with no reward
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="productItemBody">
+                <p class="bodyText product_item_decription">
+                  Choose to support us without a reward if you simply believe in
+                  our project. As a backer, you will signed up to receive
+                  product updates via email
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Success modal start -->
 
