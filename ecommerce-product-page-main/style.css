@@ -1,0 +1,27 @@
+*,
+*::after,
+*:before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/* GLOBAL CLASS */
+.container {
+  padding: 24px;
+}
