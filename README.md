@@ -11,9 +11,9 @@ Welcome to my **developer progress tracker** — an old but meaningful repositor
 This repo is a collection of code snippets, side projects, and learning experiments I created as I was building my skills and confidence in software development. It reflects:
 
 - ✍️ Learning new programming concepts
-- 🛠️ Trying out different frameworks and libraries
 - 📦 Building small features and utilities for practice
 - 🧪 Experimenting with tools and development environments
+- 📦 Mostly website challenge from frontendmentor.io
 
 Although some parts may feel rough or outdated, they show the raw, unfiltered learning process that helped shape the way I code today.
 
@@ -23,9 +23,7 @@ Although some parts may feel rough or outdated, they show the raw, unfiltered le
 
 Depending on when I created the content, you might find:
 
-- Frontend experiments with HTML/CSS/JS or frameworks like React/Vue
-- Backend playgrounds using Node.js/Express
-- Personal notes or small utilities
+- Frontend experiments with HTML/CSS/JS 
 - Incomplete or WIP projects
 - Trials with different architecture or coding styles
 
